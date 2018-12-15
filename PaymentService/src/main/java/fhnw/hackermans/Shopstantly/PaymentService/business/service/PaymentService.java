@@ -2,6 +2,7 @@ package fhnw.hackermans.Shopstantly.PaymentService.business.service;
 
 import java.util.Date;
 
+@Service
 public class PaymentService {
 	private int transactionId;
     private int amount;

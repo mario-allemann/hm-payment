@@ -1,12 +1,14 @@
-package fhnw.hackermans.Shopstantly.PaymentService;
+package fhnw.hmpayment;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class PaymentServiceApplication {
+public class HmPaymentApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(PaymentServiceApplication.class, args);
+		SpringApplication.run(HmPaymentApplication.class, args);
 	}
+
 }
+

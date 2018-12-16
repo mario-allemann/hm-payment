@@ -42,15 +42,13 @@ public class HmPaymentApplication {
 	@ResponseBody
 	int pay(@RequestParam int orderId, @RequestParam int amount) {
 		
-		/*
+		
 		Payment payment = new Payment(amount, orderId);
 		payRep.save(payment);		
 		
 		
 		return (int) amount*10;
-		*/
-		
-		return 1;
+
 		
 	}
 }

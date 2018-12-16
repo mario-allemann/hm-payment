@@ -33,7 +33,7 @@ public class HmPaymentApplication {
 	// Map test page
 	@RequestMapping("/payment")
 	@ResponseBody
-	Iterable<Payment> getAllItems() {
+	Iterable<Payment> getAllPayments() {
 		return paymRepo.findAll();
 	}
 

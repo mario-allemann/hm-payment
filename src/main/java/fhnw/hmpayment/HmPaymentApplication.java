@@ -38,7 +38,7 @@ public class HmPaymentApplication {
 		return payRep.findAll();
 	}
 	
-	@RequestMapping("/pay")
+	@RequestMapping("/payOrder")
 	@ResponseBody
 	int pay(@RequestParam int orderId, @RequestParam int amount) {
 		
@@ -49,7 +49,5 @@ public class HmPaymentApplication {
 		
 		
 		return (int) amount*10;
-
-		
 	}
 }

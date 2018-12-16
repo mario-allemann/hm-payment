@@ -2,6 +2,8 @@ package fhnw.hmpayment.domain;
 
 import org.hibernate.Query;
 import org.hibernate.LockMode;
+
+import java.util.Date;
 import java.util.List;
 
 import java.io.Serializable;
@@ -12,9 +14,6 @@ import javax.persistence.*;
 @Table(name = "Payment")
 public class Payment implements Serializable {
 
-	public Payment() {
-
-	}
 
 	@Column(name = "transactionID", nullable = false)
 	@Id
@@ -31,6 +30,18 @@ public class Payment implements Serializable {
 	@Column(name = "payDate", nullable = false)
 	@Temporal(TemporalType.DATE)
 	private java.util.Date payDate;
+	
+	
+	
+
+	public Payment(Integer amount, int orderId) {
+		super();
+		this.amount = amount;
+		this.orderId = orderId;
+		
+		this.payDate = new Date();
+	
+	}
 
 	private void setTransactionID(int value) {
 		this.transactionID = value;
@@ -71,9 +82,6 @@ public class Payment implements Serializable {
 	public java.util.Date getPayDate() {
 		return payDate;
 	}
-
-	@Transient
-	private Integer loyaltyPoints;
 
 	public String toString() {
 		return String.valueOf(getTransactionID());

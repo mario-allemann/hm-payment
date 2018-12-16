@@ -17,7 +17,7 @@ import fhnw.hmpayment.domain.PaymentRepo;
 @EnableAutoConfiguration
 public class HmPaymentApplication {
 	@Autowired
-	PaymentRepo payRep;
+	private PaymentRepo payRep;
 
 	public static void main(String[] args) {
 		SpringApplication.run(HmPaymentApplication.class, args);

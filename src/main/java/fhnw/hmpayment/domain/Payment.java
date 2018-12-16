@@ -13,7 +13,17 @@ import javax.persistence.*;
 @org.hibernate.annotations.Proxy(lazy = false)
 @Table(name = "Payment")
 public class Payment implements Serializable {
-
+	public Payment() {
+	}
+	
+	public Payment(Integer amount, int orderId) {
+		super();
+		this.amount = amount;
+		this.orderId = orderId;
+		
+		this.payDate = new Date();
+	
+	}
 
 	@Column(name = "transactionID", nullable = false)
 	@Id
@@ -30,18 +40,6 @@ public class Payment implements Serializable {
 	@Column(name = "payDate", nullable = false)
 	@Temporal(TemporalType.DATE)
 	private java.util.Date payDate;
-	
-	
-	
-
-	public Payment(Integer amount, int orderId) {
-		super();
-		this.amount = amount;
-		this.orderId = orderId;
-		
-		this.payDate = new Date();
-	
-	}
 
 	private void setTransactionID(int value) {
 		this.transactionID = value;

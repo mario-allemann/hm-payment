@@ -43,7 +43,7 @@ public class HmPaymentApplication {
 	int pay(@RequestParam int orderId, @RequestParam int amount) {
 		
 		
-		Payment payment = new Payment(amount, orderId);
+		Payment payment = new Payment();
 		
 		payRep.save(payment);		
 		

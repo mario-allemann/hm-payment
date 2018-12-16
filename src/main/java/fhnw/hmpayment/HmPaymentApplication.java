@@ -19,6 +19,21 @@ public class HmPaymentApplication {
 		SpringApplication.run(HmPaymentApplication.class, args);
 	}
 	
+	
+	// Map homepage
+	@RequestMapping("/")
+	@ResponseBody
+	String home() {
+		return "This is the homepage, faggots";
+	}
+
+	// Map test page
+	@RequestMapping("/payment")
+	@ResponseBody
+	Iterable<Payment> getAllPayments() {
+		return payRep.findAll();
+	}
+	
 	@RequestMapping("/pay")
 	@ResponseBody
 	int pay(@RequestParam int orderId, @RequestParam int amount) {
@@ -30,4 +45,3 @@ public class HmPaymentApplication {
 		return amount*10;
 	}
 }
-

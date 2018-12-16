@@ -1,5 +1,6 @@
 package fhnw.hmpayment;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,8 +12,7 @@ import fhnw.hmpayment.domain.PaymentRepo;
 
 @SpringBootApplication
 public class HmPaymentApplication {
-	
-	
+	@Autowired
 	PaymentRepo payRep;
 
 	public static void main(String[] args) {
